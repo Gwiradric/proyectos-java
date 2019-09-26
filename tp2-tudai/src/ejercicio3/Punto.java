@@ -1,7 +1,7 @@
 package ejercicio3;
 
 public class Punto {
-	private int x, y;
+	private double x, y;
 	
 	public Punto() {
 		this.setX(0);
@@ -18,20 +18,20 @@ public class Punto {
 		this.setY(p.getY());
 	}
 
-	public int getX() {
+	public double getX() {
 		return x;
 	}
 
-	public void setX(int x) {
-		this.x = x;
+	public void setX(double d) {
+		this.x = d;
 	}
 
-	public int getY() {
+	public double getY() {
 		return y;
 	}
 
-	public void setY(int y) {
-		this.y = y;
+	public void setY(double d) {
+		this.y = d;
 	}
 	
 	public void setCoordenadas(int x, int y) {
@@ -39,12 +39,12 @@ public class Punto {
 		this.setY(y);
 	}
 	
-	public void trasladarX(int x) {
+	public void trasladarX(double x) {
 		this.setX(this.getX() + x);
 	}
 	
-	public void trasladarY(int y) {
-		this.setY(this.getY() + y);
+	public void trasladarY(double d) {
+		this.setY(this.getY() + d);
 	}
 	
 	public void trasladar(int x, int y) {

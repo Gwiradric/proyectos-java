@@ -5,16 +5,21 @@ import java.time.Period;
 import java.util.Vector;
 
 public class Persona {
+//	CONSTANTES
 	private final double pesoMinimo = 18.5;
 	private final double pesoMaximo = 25;
 	private final int mayorDeEdad = 18;
 	private final int edadParaVotar = 16;
+	
+//	ATRIBUTOS
 	
 	private String nombre, apellido, sexo;
 	private LocalDate fechaNacimiento;
 	private int dni;
 	private double peso, altura;
 	
+//	CONSTRUCTOR Y METODOS
+
 	public Persona(int dni) {
 		this.dni = dni;
 		this.fechaNacimiento = LocalDate.of(2000, 1, 1);
@@ -25,6 +30,7 @@ public class Persona {
 		this.setAltura(1);
 	}
 	
+
 	public Vector<Integer> getEdad() {
 		LocalDate ahora = LocalDate.now();
 		Period periodo = Period.between(fechaNacimiento, ahora);
