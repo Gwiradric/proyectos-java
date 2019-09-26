@@ -29,4 +29,16 @@ public class Compra {
 		return total;
 	}
 	
+	public String toString() {
+		String s = "--------------------------------\n";
+		s += "Factura de compra\n";
+		s += "--------------------------------\n";
+		for (int i = 0; i < productos.size(); i++) {
+			s += (productos.elementAt(i).getProducto().getNombre() + "\n$" + productos.elementAt(i).getProducto().getPrecio() + " x " + productos.elementAt(i).getCantidad() + " = $" + productos.elementAt(i).getMonto() + "\n");
+		}
+		s += "--------------------------------\n";
+		s += ("Monto total: $" + getMontoTotal() + "\n");
+		return s;
+	}
+	
 }

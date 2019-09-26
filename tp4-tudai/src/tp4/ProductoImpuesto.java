@@ -36,11 +36,11 @@ public class ProductoImpuesto extends Producto {
 	}
 
 	private double getImpProv() {
-		return (getPrecio() * getPorcentaje() + getDineroProvincial());
+		return (super.getPrecio() * getPorcentaje() + getDineroProvincial());
 	};
 	
 	private double getImpNac() {
-		return (getPrecio() * getPorcentaje() + getDineroNacional());
+		return (super.getPrecio() * getPorcentaje() + getDineroNacional());
 	};
 	
 	@Override
