@@ -17,7 +17,11 @@ public class ProductoImpuesto extends Producto{
 	@Override
 	public double getPrecio() {
 		// TODO Auto-generated method stub
-		return ();
+		double suma = 0;
+		for (int i = 0; i < impuestos.size(); i++) {
+			suma += impuestos.elementAt(i).getCalculo(super.getPrecio());
+		}
+		return (super.getPrecio() + suma);
 	}
 	
 	

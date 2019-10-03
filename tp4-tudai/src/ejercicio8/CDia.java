@@ -3,21 +3,17 @@ package ejercicio8;
 import java.time.LocalDate;
 
 public class CDia implements Criterio {
-	private LocalDate dia;
+	private String dia;
 	
-	public CDia(LocalDate dia) {
+	public CDia(String dia) {
 		this.dia = dia;
-	}
-	
-	public LocalDate getDia() {
-		return dia;
 	}
 
 	@Override
 	public boolean cumple() {
 		// TODO Auto-generated method stub
-		LocalDate ld = LocalDate.now();
-		return (ld.equals(this.getDia()));
+		LocalDate l = LocalDate.now();
+		return (dia.equals(l.getDayOfWeek().toString()));
 	}
 
 	
