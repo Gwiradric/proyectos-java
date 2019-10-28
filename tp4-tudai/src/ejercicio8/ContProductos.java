@@ -17,8 +17,12 @@ public class ContProductos {
 		return (cantidad);
 	}
 	
-	public void incrementarCantidad() {
-		cantidad++;
+	public void incrementarCantidad(int i) {
+		cantidad += i;
+	}
+	
+	public void disminuirCantidad(int i) {
+		cantidad -= i;
 	}
 	
 	public double getPrecio() {
@@ -27,5 +31,9 @@ public class ContProductos {
 	
 	public boolean contains(ContProductos c) {
 		return (this.getProducto().equals(c.getProducto()));
+	}
+	
+	public boolean equals(ContProductos c) {
+		return (this.getProducto().getNombre() == c.getProducto().getNombre());
 	}
 }

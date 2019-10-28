@@ -14,7 +14,7 @@ public class Compra {
 		if (i == productos.size()) {
 			productos.add(cp);
 		} else {
-			productos.elementAt(i).incrementarCantidad();
+			productos.elementAt(i).incrementarCantidad(cp.getCantidad());
 		}
 	}
 	
@@ -24,6 +24,10 @@ public class Compra {
 			suma += productos.elementAt(i).getPrecio();
 		}
 		return suma;
+	}
+	
+	public Vector<ContProductos> getProductos() {
+		return productos;
 	}
 	
 	public String toString() {
